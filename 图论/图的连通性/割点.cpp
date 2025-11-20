@@ -37,6 +37,7 @@ void dfs(int v,int fa)
         else if(nxt!=fa)low[v]=min(low[v],dfn[nxt]);//自己往回走一次
     }
     if(fa==-1&&n>=2)iscut[v]=1;
+    //根节点只要有2个及以上儿子就一定是割点
 }
 int main()
 {
@@ -63,3 +64,4 @@ int main()
     cout<<ans.size()<<'\n';
     for(int i=0;i<ans.size();i++)cout<<ans[i]<<' ';
 }
+//求割边的问题大同小异，子节点的low大于当前节点就有割边
