@@ -5,7 +5,7 @@ const int maxn=2e4+10;
 vector<int>tu[maxn];
 bool jud[maxn];//判断是否遍历过
 int dfn[maxn];//dfs树的序列号
-int low[maxn];//当前节点和子树只往回走一次能走到的最小dfn
+int low[maxn];//当前节点和通过回边能走到的最小dfn
 bool iscut[maxn];//判断是不是割点
 int cnt;
 void init(int n)
