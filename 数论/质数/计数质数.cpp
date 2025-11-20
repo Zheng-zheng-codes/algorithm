@@ -1,15 +1,15 @@
-//¸ø¶¨ÕûÊı n £¬·µ»Ø ËùÓĞĞ¡ÓÚ·Ç¸ºÕûÊı?n?µÄÖÊÊıµÄÊıÁ¿¡£
+//ç»™å®šæ•´æ•° n ï¼Œè¿”å› æ‰€æœ‰å°äºéè´Ÿæ•´æ•°nçš„è´¨æ•°çš„æ•°é‡ã€‚
 #include<bits/stdc++.h>
 using namespace std;
 int countPrimes(int n) 
 {
     n--;
     if(n<=1)return 0;
-    int cnt=(n+1)/2;//Ô¤¹ÀÖÊÊı¸öÊı£¨ÒÑ¾­É¾³ıÁËËùÓĞÅ¼Êı£©
+    int cnt=(n+1)/2;//é¢„ä¼°è´¨æ•°ä¸ªæ•°ï¼ˆå·²ç»åˆ é™¤äº†æ‰€æœ‰å¶æ•°ï¼‰
     vector<bool>visited(n+1,0);
-    //visited[i]=false£ºiÊÇÖÊÊı
-    //visited[i]=true£ºiÊÇºÏÊı
-    for(int i=3;i*i<=n;i+=2)//Ö»É¸ÆæÊı¼´¿É
+    //visited[i]=falseï¼šiæ˜¯è´¨æ•°
+    //visited[i]=trueï¼šiæ˜¯åˆæ•°
+    for(int i=3;i*i<=n;i+=2)//åªç­›å¥‡æ•°å³å¯
     {
         if(visited[i])continue;
         for(int j=i*i;j<=n;j+=2*i)
@@ -22,4 +22,5 @@ int countPrimes(int n)
         }
     }
     return cnt;
+
 }
