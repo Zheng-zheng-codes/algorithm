@@ -65,3 +65,4 @@ int main()
     for(int i=0;i<ans.size();i++)cout<<ans[i]<<' ';
 }
 //求割边的问题大同小异，子节点的low大于当前节点就有割边
+//但是要重点提防平行边
