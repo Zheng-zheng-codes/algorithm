@@ -57,6 +57,8 @@ void dfs(int u)
         scc.push_back(ans);
     }
 }
+//把每个强连通分量进行缩点，出度为0的强连通分量如果只有一个那么这里面的牛都是受欢迎的
+//否则有0个
 int main()
 {
     ios::sync_with_stdio(0);
