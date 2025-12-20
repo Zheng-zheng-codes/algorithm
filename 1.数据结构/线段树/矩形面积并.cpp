@@ -13,7 +13,6 @@
 #define rs k<<1|1
 using namespace std;
 const int maxn=2e5+10;
-int cnt=0;
 struct tree
 {
     int all;//总长度
@@ -23,7 +22,7 @@ struct tree
 int a[maxn];//离散化
 struct line
 {
-    int x1;
+    int x;
     int y1;
     int y2;
     int change;
@@ -33,7 +32,7 @@ struct line
 //x2  y1~y2  -1
 static bool cmp(line l1,line l2)
 {
-    return l1.x1<l2.x1;
+    return l1.x<l2.x;
 }
 void pushup(int k,int l,int r)
 {
@@ -71,6 +70,7 @@ signed main()
     cin.tie(0),cout.tie(0);
     int n;
     cin>>n;
+    int cnt=0;
     int cnt2=0;
     for(int i=0;i<n;i++)
     {
@@ -79,12 +79,12 @@ signed main()
         a[++cnt]=y1;
         a[++cnt]=y2;
         cnt2++;
-        lin[cnt2].x1=x1;
+        lin[cnt2].x=x1;
         lin[cnt2].y1=y1;
         lin[cnt2].y2=y2;
         lin[cnt2].change=1;
         cnt2++;
-        lin[cnt2].x1=x2;
+        lin[cnt2].x=x2;
         lin[cnt2].y1=y1;
         lin[cnt2].y2=y2;
         lin[cnt2].change=-1;
@@ -98,7 +98,7 @@ signed main()
     {
         int y1 = lower_bound(a + 1, a + num + 1, lin[i].y1) - a;
         int y2 = lower_bound(a + 1, a + num + 1, lin[i].y2) - a - 1;
-        if(i>1)ans+=t[1].len*(lin[i].x1-lin[i-1].x1);
+        if(i>1)ans+=t[1].len*(lin[i].x-lin[i-1].x);
         add(1,1,num,y1,y2,lin[i].change);
     }
     cout<<ans<<'\n';
