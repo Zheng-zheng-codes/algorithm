@@ -48,8 +48,6 @@ void solve()
         jud[i]=0;
         pq.push({dis[i],i});
     }
-    for(int i=1;i<=n;++i)
-    pq.push({0,1});
     while(!pq.empty())
     {
         auto [a,b]=pq.top();//距离 节点
