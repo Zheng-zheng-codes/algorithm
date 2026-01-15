@@ -6,7 +6,7 @@
 using namespace std;
 const int maxn=1e5+10;
 int a[maxn];
-int d[maxn];
+int d[maxn];//差分数组
 struct tree
 {
     bool ifup;
