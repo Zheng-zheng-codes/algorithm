@@ -1,8 +1,8 @@
-//Miller-RabinÄ£°å
-// ÅÐ¶Ï½Ï´óµÄÊý×ÖÊÇ·ñÊÇÖÊÊý(Miller-Rabin²âÊÔ)
-// C++Í¬Ñ§¿ÉÒÔÌá½»ÈçÏÂ´úÂë
-// ¿ÉÒÔÍ¨¹ýËùÓÐ²âÊÔÓÃÀý£¬ºËÐÄÔÚÓÚµÚ11ÐÐ£¬ÕûÐÍ³ÉÁË128Î»
-// ²âÊÔÁ´½Ó : https://www.luogu.com.cn/problem/U148828
+//Miller-Rabinæ¨¡æ¿
+// åˆ¤æ–­è¾ƒå¤§çš„æ•°å­—æ˜¯å¦æ˜¯è´¨æ•°(Miller-Rabinæµ‹è¯•)
+// C++åŒå­¦å¯ä»¥æäº¤å¦‚ä¸‹ä»£ç 
+// å¯ä»¥é€šè¿‡æ‰€æœ‰æµ‹è¯•ç”¨ä¾‹ï¼Œæ ¸å¿ƒåœ¨äºŽç¬¬11è¡Œï¼Œæ•´åž‹æˆäº†128ä½
+// æµ‹è¯•é“¾æŽ¥ : https://www.luogu.com.cn/problem/U148828
 #include <bits/stdc++.h>
 using namespace std;
 

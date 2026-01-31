@@ -1,9 +1,9 @@
 #include<bits/stdc++.h>
 using namespace std;
 const int MAXN = 1e7 + 5;
-int minp[MAXN];       // minp[x] ±íÊ¾ x µÄ×îĞ¡ÖÊÒò×Ó
+int minp[MAXN];       // minp[x] è¡¨ç¤º x çš„æœ€å°è´¨å› å­
 vector<int> primes;
-// Å·À­É¸
+// æ¬§æ‹‰ç­›
 void Euler(int n) {
     for (int i = 2; i <= n; i++) {
         if (!minp[i]) {

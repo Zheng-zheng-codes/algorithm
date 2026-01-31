@@ -1,4 +1,4 @@
-//得到小于x的最小质因子
+//寰楀埌姣忎釜鏁扮殑鏈�灏忚川鍥犳暟
 #include<bits/stdc++.h>
 using namespace std;
 const int MAX = 5e6 + 10;
