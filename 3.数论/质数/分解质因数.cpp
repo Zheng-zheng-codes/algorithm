@@ -1,6 +1,6 @@
 #include<bits/stdc++.h>
 using namespace std;
-// ·Ö½âÖÊÒòÊı£¨Ö»Êä³ö²»ÖØ¸´µÄÖÊÒò×Ó£©
+// åˆ†è§£è´¨å› æ•°ï¼ˆåªè¾“å‡ºä¸é‡å¤çš„è´¨å› å­ï¼‰
 vector<int> getPrimeFactors(int n) {
     vector<int> factors;
     for (int i = 2; i * i <= n; i++) {
