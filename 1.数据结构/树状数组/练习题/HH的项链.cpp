@@ -1,4 +1,5 @@
 //https://www.luogu.com.cn/problem/P1972
+//树状数组离线查询
 #include<bits/stdc++.h>
 using namespace std;
 const int maxn=1e6+10;
@@ -6,10 +7,10 @@ int a[maxn];
 struct que
 {
     int l,r,idx;
-}q[maxn];
+}q[maxn];//记录每次查询的范围和序号
 int n;
-int tree[maxn];
-unordered_map<int,int>um;
+int tree[maxn];//只考虑最右位置的贝壳，范围内的贝壳数
+unordered_map<int,int>um;//记录每个贝壳出现的最右位置
 int ans[maxn];
 static bool cmp(que a,que b)
 {
@@ -51,12 +52,12 @@ int main()
     {
         while(s<=q[i].r)
         {
-            if(!um.count(a[s]))
+            if(!um.count(a[s]))//该贝壳从未出现
             {
                 um[a[s]]=s;
                 add(s,1);
             }
-            else
+            else//该贝壳出现过（删掉之前位置的记录，并加上新的记录）
             {
                 add(um[a[s]],-1);
                 add(s,1);
