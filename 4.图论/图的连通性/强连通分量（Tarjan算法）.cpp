@@ -3,8 +3,8 @@
 using namespace std;
 const int maxn=1e5+10;
 vector<int>tu[maxn];
-int dfn[maxn];
-int low[maxn];
+int dfn[maxn];//访问的次序
+int low[maxn];//记录当前节点所有和它联通的点的dfn最小值
 int cnt;
 bool insta[maxn];
 stack<int>sta;
