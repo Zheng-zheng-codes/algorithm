@@ -1,5 +1,5 @@
 //https://onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=2176
-//把一样的数字建立成一个桶，对每个桶建立ST表
+//把一样的数字建立成一个桶，对每个桶元素的个数建立ST表
 #include<bits/stdc++.h>
 using namespace std;
 const int maxn=1e5+10;
