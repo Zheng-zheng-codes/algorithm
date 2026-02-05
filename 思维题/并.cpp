@@ -12,7 +12,8 @@ int qpow(int a,int b)
     long long base = a % mod;
     long long res = 1;
     long long e = b;
-    while(e > 0){
+    while(e > 0)
+    {
         if(e & 1) res = (res * base) % mod;
         base = (base * base) % mod;
         e >>= 1;
