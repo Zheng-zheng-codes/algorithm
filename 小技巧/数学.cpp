@@ -19,5 +19,6 @@ int main()
     cin>>m;
     double num4=pow(n,m);//n的m次方
     double num5=log10(n);//以10为底n的对数
+    double num6=log2(n);//以2为底n的对数
     return 0;
 }
