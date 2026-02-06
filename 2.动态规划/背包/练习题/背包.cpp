@@ -9,7 +9,7 @@ using namespace std;
 const int maxn=5e3+10;
 const int maxm=1e4+10;
 int dp[maxm];
-int las[maxn];
+int las[maxn];//las[i]:从第i个物品开始后面的免费k个的美丽度
 struct thing
 {
     int val;
