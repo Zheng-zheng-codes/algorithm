@@ -1,3 +1,4 @@
+//使用快读快写的时候不能关闭同步流
 #include<bits/stdc++.h>
 using namespace std;
 inline int read(){
