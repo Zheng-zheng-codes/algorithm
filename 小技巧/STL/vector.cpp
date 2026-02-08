@@ -20,7 +20,7 @@ int main()
     //不断插入数据时vector会扩容capacity就是扩容后的大小
     //5.删除元素
     v2.pop_back(); // 删除最后一个元素
-    v2.erase(v2.begin()+2);//删掉下表为2的数
+    v2.erase(v2.begin()+2);//删掉下标为2的数
     v3.clear();    // 清空所有元素
     //6.遍历
     for(int i=0;i<v2.size();i++)cout<<v2[i]<<" ";
