@@ -1,16 +1,14 @@
-//http://poj.org/problem?id=1655
-//重心的第一种求解方式:最大子树的节点数最少
-//本题输出重心和重心对应的最大子树的大小
+//http://poj.org/problem?id=3107
+//树的重心第二种求法：每棵子树的节点数都不超过所有节点数的一半
 #include<iostream>
 #include<vector>
+#include<algorithm>
 using namespace std;
-using pii=pair<int,int>;
 const int maxn=2e4+10;
 vector<int>tu[maxn];
 int siz[maxn];
 bool jud[maxn];
-vector<pii>res;
-int best;
+vector<int>res;
 int n;
 void dfs(int node)
 {
@@ -26,13 +24,7 @@ void dfs(int node)
         maxsiz=max(maxsiz,siz[tmp]);
     }
     maxsiz=max(maxsiz,n-siz[node]);
-    if(maxsiz==best)res.push_back({node,maxsiz});
-    else if(maxsiz<best)
-    {
-        best=maxsiz;
-        res.clear();
-        res.push_back({node,maxsiz});
-    }
+    if(maxsiz<=n/2)res.push_back(node);
 }
 void solve()
 {
@@ -44,7 +36,6 @@ void solve()
         tu[i].clear();
     }
     res.clear();
-    best=maxn;
     for(int i=0;i<n-1;++i)
     {
         int a,b;cin>>a>>b;
@@ -52,13 +43,14 @@ void solve()
         tu[b].push_back(a);
     }
     dfs(1);
-    for(int i=0;i<res.size();++i)cout<<res[i].first<<' '<<res[i].second<<' ';
+    sort(res.begin(),res.end());
+    for(int i=0;i<res.size();++i)cout<<res[i]<<' ';
     cout<<'\n';
 }
 int main()
 {
     ios::sync_with_stdio(0);
     cin.tie(0),cout.tie(0);
-    int t;cin>>t;
+    int t=1;//cin>>t;
     while(t--)solve();
 }
