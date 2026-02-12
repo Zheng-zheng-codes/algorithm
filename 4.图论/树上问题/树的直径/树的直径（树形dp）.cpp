@@ -27,9 +27,9 @@ int main()
     int n;cin>>n;
     for(int i=0;i<n-1;++i)
     {
-        int x,y,w;cin>>x>>y>>w;
-        tu[x].push_back({y,w});
-        tu[y].push_back({x,w});
+        int x,y;cin>>x>>y;
+        tu[x].push_back({y,1});
+        tu[y].push_back({x,1});
     }
     dp(1,0);
     cout<<res;
