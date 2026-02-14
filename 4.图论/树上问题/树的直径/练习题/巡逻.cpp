@@ -1,4 +1,8 @@
 //https://www.luogu.com.cn/problem/P3629
+//k=1或2
+//如果不加其他边，需要2*(n-1)次访问
+//加上一条边会减去形成的环的大小再加1：找直径即可-->两次dfs
+//加上两条边在基础上再减去新形成的环的大小再加1，同时还要加上重叠部分的环大小：把第一次找到的直径上的边边权变成-1再找直径-->树形dp
 #include<bits/stdc++.h>
 using namespace std;
 const int maxn=3e5+10;
