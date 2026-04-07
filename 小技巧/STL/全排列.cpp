@@ -5,6 +5,8 @@ int main()
     ios::sync_with_stdio(0);
     cin.tie(0),cout.tie(0);
     vector<int>vec={1,2,3};
+    //单次O(n)
+    //输出全部O(n*n!)
     while(next_permutation(vec.begin(),vec.end()))//把全排列按字典序输出
     //下一个全排列还存在返回true，并把vec换成下一个全排列
     //否则返回false，vec变成第一个全排列
